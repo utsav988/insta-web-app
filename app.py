@@ -40,9 +40,7 @@ def signup():
         return redirect('/login')
     return render_template('signup.html')
 
+# ✅ Fix: wrap run block properly
 if __name__ == '__main__':
-    import os
-
-port = int(os.environ.get("PORT", 5000))
-app.run(host="0.0.0.0", port=port)
-
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
